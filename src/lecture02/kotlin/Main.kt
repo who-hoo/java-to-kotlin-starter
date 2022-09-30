@@ -15,6 +15,10 @@ fun startsWithA3(str: String?): Boolean {
     return str?.startsWith("A") ?: false
 }
 
+fun startsWithA(str: String?): Boolean {
+    return str!!.startsWith("A")
+}
+
 fun addOne(number: Long?): Long {
     number ?: return 0
     return number + 1
@@ -24,4 +28,7 @@ fun main() {
     val str: String? = null
     println(str?.length)
     println(str?.length ?: 0)
+
+    println(startsWithA("ABC"))
+    println(startsWithA(null))
 }
