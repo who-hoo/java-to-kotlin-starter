@@ -23,6 +23,13 @@ public class Main {
         return str.startsWith("A");
     }
 
+    public long addOne(Long number) {
+        if (number == null) {
+            return 0;
+        }
+        return number + 1;
+    }
+
     public static void main(String[] args) {
 
     }
