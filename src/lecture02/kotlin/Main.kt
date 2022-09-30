@@ -1,5 +1,6 @@
 package lecture02.kotlin
 
+import lecture02.java.Person
 import java.lang.IllegalArgumentException
 
 fun startsWithA1(str: String?): Boolean {
@@ -19,6 +20,10 @@ fun startsWithA(str: String?): Boolean {
     return str!!.startsWith("A")
 }
 
+fun startsWithB(str: String): Boolean {
+    return str.startsWith("B")
+}
+
 fun addOne(number: Long?): Long {
     number ?: return 0
     return number + 1
@@ -29,6 +34,9 @@ fun main() {
     println(str?.length)
     println(str?.length ?: 0)
 
-    println(startsWithA("ABC"))
-    println(startsWithA(null))
+//    println(startsWithA("ABC"))
+//    println(startsWithA(null))
+
+    val person = Person(null)
+    startsWithB(person.name)
 }
