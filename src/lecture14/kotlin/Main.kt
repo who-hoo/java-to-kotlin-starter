@@ -10,3 +10,11 @@ fun handleCountry(country: Country) {
         Country.AMERICA -> TODO()
     }
 }
+
+fun handleCar(car: HyandaiCar) {
+    when (car) {
+        is Avante -> TODO()
+        is Grandeur -> TODO()
+        is Sonata -> TODO()
+    }
+}
