@@ -17,6 +17,10 @@ fun main() {
 
     val srt2: Srt = Srt()
     srt2.isExpensive() // Srt의 확장함수
+
+    println(1.add(2))
+    println(1.infixAdd(2))
+    println(1 infixAdd 2)
 }
 
 fun String.lastChar(): Char {
@@ -43,4 +47,12 @@ class Srt : Train("SRT", 40_000)
 fun Srt.isExpensive(): Boolean {
     println("Srt의 확장함수")
     return this.price >= 10000
+}
+
+fun Int.add(other: Int): Int {
+    return this + other
+}
+
+infix fun Int.infixAdd(other: Int): Int {
+    return this + other
 }
