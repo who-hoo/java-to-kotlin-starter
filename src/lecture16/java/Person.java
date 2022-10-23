@@ -2,11 +2,13 @@ package lecture16.java;
 
 public class Person {
 
-    private final String name;
+    private final String firstName;
+    private final String lastName;
     private int age;
 
-    public Person(String name, int age) {
-        this.name = name;
+    public Person(String firstName, String lastName, int age) {
+        this.firstName = firstName;
+        this.lastName = lastName;
         this.age = age;
     }
 

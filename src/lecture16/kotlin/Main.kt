@@ -6,7 +6,7 @@ fun main() {
     val str = "ABC"
     println(str.lastChar())
 
-    val person = Person("홍길동", 10)
+    val person = Person("홍", "길동", 10)
     println(person.nextYearAge())
 
     val train: Train = Train()
@@ -59,4 +59,16 @@ infix fun Int.infixAdd(other: Int): Int {
 
 inline fun Int.inlineAdd(other: Int): Int {
     return this + other
+}
+
+fun createPerson(firstName: String, lastName: String): Person {
+    fun validateName(name: String, fieldName: String) {
+        if (name.isEmpty()) {
+            throw IllegalArgumentException("${fieldName}은 비어있을 수 없습니다.")
+        }
+    }
+    validateName(firstName, "firstName")
+    validateName(lastName, "lastName")
+
+    return Person(firstName, lastName, 1)
 }
