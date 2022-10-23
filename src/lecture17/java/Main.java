@@ -32,6 +32,10 @@ public class Main {
         System.out.println(filterFruitsUsingStream(
             fruits, fruit -> Arrays.asList("사과", "바나나").contains(fruit.getName())
                 && fruit.getPrice() > 5_000));
+
+//        String targetFruitName = "바나나";
+//        targetFruitName = "수박";
+//        filterFruits(fruits, fruit -> targetFruitName.equals(fruit.getName()));
     }
 
     private static List<Fruit> findFruitsByName(List<Fruit> fruits, String name) {
