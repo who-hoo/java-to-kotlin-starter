@@ -40,6 +40,20 @@ fun main() {
     }
 
     val mutableNumberSet = mutableSetOf(100, 200) // 가변 셋 생성
+
+    val oldMap = mutableMapOf<Int, String>()
+    oldMap[1] = "MONDAY"
+    oldMap[2] = "TUESDAY"
+
+    val newMap = mapOf(1 to "MONDAY", 2 to "TUESDAY")
+    for (key in newMap.keys) {
+        println(key)
+        println(newMap[key])
+    }
+    for ((key, value) in newMap.entries) {
+        println(key)
+        println(value)
+    }
 }
 
 private fun printNumbers(numbers: List<Int>) {
