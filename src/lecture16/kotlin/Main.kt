@@ -56,3 +56,7 @@ fun Int.add(other: Int): Int {
 infix fun Int.infixAdd(other: Int): Int {
     return this + other
 }
+
+inline fun Int.inlineAdd(other: Int): Int {
+    return this + other
+}
