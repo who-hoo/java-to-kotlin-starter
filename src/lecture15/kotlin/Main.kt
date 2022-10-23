@@ -28,6 +28,18 @@ fun main() {
 
     val mutableNumbers = mutableListOf(100, 200) // 가변 리스트 생성
     mutableNumbers.add(300)
+
+    val numberSet = setOf(100, 200) // 불변 셋 생성
+    // for each
+    for (number in numberSet) {
+        println(number)
+    }
+    // 전통적인 for문
+    for ((idx, number) in numberSet.withIndex()) {
+        println("$idx $number")
+    }
+
+    val mutableNumberSet = mutableSetOf(100, 200) // 가변 셋 생성
 }
 
 private fun printNumbers(numbers: List<Int>) {
