@@ -33,6 +33,26 @@ class Person(
     }
 }
 
+class Number(
+    val number: Int
+) {
+    fun getNumberOrNullV1(): Int? {
+        return if (number <= 0) {
+            null
+        } else {
+            number
+        }
+    }
+
+    fun getNumberOrNullV2(): Int? {
+        return number.takeIf { number > 0 }
+    }
+
+    fun getNumberOrNullV3(): Int? {
+        return number.takeUnless { number <= 0 }
+    }
+}
+
 fun main() {
     printHelloWorldA()
     printHelloWorldB()
@@ -70,4 +90,14 @@ fun main() {
             println("${i} ${j}")
         }
     }
+
+    val number1 = Number(0)
+    println(number1.getNumberOrNullV1())
+    println(number1.getNumberOrNullV2())
+    println(number1.getNumberOrNullV3())
+
+    val number2 = Number(1)
+    println(number2.getNumberOrNullV1())
+    println(number2.getNumberOrNullV2())
+    println(number2.getNumberOrNullV3())
 }
