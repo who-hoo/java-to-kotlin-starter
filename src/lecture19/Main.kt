@@ -15,7 +15,29 @@ data class UltraSuperGuardianTribe(
 
 typealias USGTMap = Map<String, UltraSuperGuardianTribe>
 
+//data class Person(
+//    val name: String,
+//    var age: Int
+//)
+
+class Person(
+    val name: String,
+    var age: Int
+) {
+    operator fun component1(): String {
+        return this.name
+    }
+
+    operator fun component2(): Int {
+        return this.age
+    }
+}
+
 fun main() {
     printHelloWorldA()
     printHelloWorldB()
+
+    val person = Person("홍길동", 100)
+    val (name, age) = person
+    println("${name}의 나이는 ${age}입니다.")
 }
