@@ -40,4 +40,34 @@ fun main() {
     val person = Person("홍길동", 100)
     val (name, age) = person
     println("${name}의 나이는 ${age}입니다.")
+
+    val numbers = listOf(1, 2, 3)
+    numbers.map { number -> number + 1 }
+        .forEach { number -> println(number) }
+
+    // break with forEach
+    run {
+        numbers.forEach { number ->
+            if (number == 2) {
+                return@run
+            }
+        }
+    }
+
+    //continue with forEach
+    numbers.forEach { number ->
+        if (number == 2) {
+            return@forEach
+        }
+    }
+
+    // label
+    loop@ for (i in 1..100) {
+        for (j in 1..100) {
+            if (j == 2) {
+                break@loop
+            }
+            println("${i} ${j}")
+        }
+    }
 }
